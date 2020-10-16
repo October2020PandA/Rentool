@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Router} from "@reach/router"
+import Main from "./pages/Main"
+import Login from "./components/Login"
+import ToolAdd from "./components/ToolAdd"
+import ToolDetail from "./components/ToolDetail"
+import ToolList from "./components/ToolList"
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Main path="/" default/>
+        <Login path="/signin"/>
+        <ToolAdd path="/dashboard/new"/>
+        <ToolDetail path="/dashboard/:id"/>
+        <ToolList path="/dashboard/cart"/>
+      </Router>
     </div>
   );
 }
