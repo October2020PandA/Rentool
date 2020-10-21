@@ -29,14 +29,16 @@ const ToolAdd = () => {
     }
     return(
         <div className="container">
-            <h1>RenTool</h1>
-            <h4>Post an Tool</h4>
+            <div id="nav"></div>
             <ul className="nav justify-content-end">
                 <li className="nav-item">
                     <button className="btn btn-secondary btn-m" onClick={() => navigate(`/`)}>Back to Home</button>
                 </li>
             </ul>
             <form onSubmit={onSubmit}>
+            <h1 className="main_title">RentTool</h1>
+            <hr/>
+            <h4>Post a Tool</h4>
                 
                     <div className="form-group col-md-6">
                         <label>Name</label>
@@ -54,7 +56,7 @@ const ToolAdd = () => {
                         {errs.price ? <p className="text-danger small">{errs.price.message}</p>: null}
                     </div>
                     <Upload/>
-            
+
                 <input className="btn btn-primary btn-lg" type="submit" value="Post"/>
             </form>
         </div>

@@ -55,7 +55,7 @@ export default function Upload() {
         }
     };
     return (
-        <div>
+        <div className="upload-image">
             <h1 className="title">Upload an Image</h1>
             <Alert msg={errMsg} type="danger" />
             <Alert msg={successMsg} type="success" />
