@@ -18,10 +18,16 @@ code {
 #post {
   margin-left: 950px;
 }
-.main_title {
+hr {
+  padding-bottom: 60px;
+}
+.font-weight-bold {
   text-align: center;
   padding-bottom: 30px;
   font-size: 70px;
+}
+.main_title {
+  margin-top: 100px;
 }
 .search-label {
   position: relative;
@@ -45,11 +51,6 @@ code {
 h4 {
   padding-bottom: 20px;
   margin-left: 80px;
-
-}
-.title {
-  padding-bottom: 40px;
-  padding-top: 20px;
 }
 .upload-image {
   margin-left: 400px;
@@ -57,4 +58,32 @@ h4 {
 .btn-primary {
   margin-top: 40px;
   margin-left: 400px;
+}
+.btn-secondary {
+  margin-top: 40px;
+}
+.login-form {
+  max-width: 300px;
+  padding: 15px;
+  margin: auto;
+}
+.colum, .terms-of-service {
+  max-width: 300px;
+  padding: 15px;
+  margin: auto;
+}
+i {
+  margin-right: 8px;
+}
+.p-2 {
+  cursor: pointer;
+}
+.card {
+  display: inline-block;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.col-sm {
+  text-align: start;
+  display: inline-block;
 }

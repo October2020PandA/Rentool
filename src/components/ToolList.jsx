@@ -17,18 +17,15 @@ const ToolList = () => {
         getTools()
     },[page])
 
-
-
     return(
         <div className="container mt-3">
-            <div id="nav"></div>
             <ul className="nav justify-content-end">
                 <li className="nav-item">
-                    <button className="btn btn-secondary btn-m" onClick={() => navigate(`dashboard/new`)}>Post Item</button>
+                    <button className="btn btn-secondary btn-m" onClick={() => navigate(`/signin`)}>Post Item</button>
                 </li>
             </ul>
 
-            <h1 className="main_title">RentTool</h1>
+            <h1 className="font-weight-bold">RenTool</h1>
                   
             <div className="search">
 			<label className="search-label" htmlFor="search-input">

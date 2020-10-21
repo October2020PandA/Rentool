@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import axios from 'axios'
 import {navigate} from "@reach/router"
 import Upload from './UploadFile'
+import { UserContext } from '../provider/Provider';
 
 const ToolAdd = () => {
     const [name, setName] = useState("");
@@ -9,10 +10,11 @@ const ToolAdd = () => {
     const [price, setPrice] = useState("")
     const [image, setImage] = useState("")
     const [errs, setErrs] = useState("");
+    const [user] = useContext(UserContext);
 
     const onSubmit = e =>{
         e.preventDefault();
-        axios.post('http://localhost:8000/api/tool/new', {
+        axios.post(`http://localhost:8000/api/tool/${user.id}`, {
             name,
             description,
             price,
@@ -29,14 +31,13 @@ const ToolAdd = () => {
     }
     return(
         <div className="container">
-            <div id="nav"></div>
             <ul className="nav justify-content-end">
                 <li className="nav-item">
                     <button className="btn btn-secondary btn-m" onClick={() => navigate(`/`)}>Back to Home</button>
                 </li>
             </ul>
             <form onSubmit={onSubmit}>
-            <h1 className="main_title">RentTool</h1>
+            <h1 className="font-weight-bold">RenTool</h1>
             <hr/>
             <h4>Post a Tool</h4>
                 
