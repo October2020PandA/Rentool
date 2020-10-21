@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import axios from 'axios'
 import {navigate} from "@reach/router"
 import Upload from './UploadFile'
+import { UserContext } from '../provider/Provider';
 
 const ToolAdd = () => {
     const [name, setName] = useState("");
@@ -9,10 +10,11 @@ const ToolAdd = () => {
     const [price, setPrice] = useState("")
     const [image, setImage] = useState("")
     const [errs, setErrs] = useState("");
+    const [user] = useContext(UserContext);
 
     const onSubmit = e =>{
         e.preventDefault();
-        axios.post('http://localhost:8000/api/tool/new', {
+        axios.post(`http://localhost:8000/api/tool/${user.id}`, {
             name,
             description,
             price,
@@ -37,7 +39,6 @@ const ToolAdd = () => {
                 </li>
             </ul>
             <form onSubmit={onSubmit}>
-                
                     <div className="form-group col-md-6">
                         <label>Name</label>
                         <input className="form-control form-control-sm w-50" type="text" value={name} name="name" onChange={(e) => setName(e.target.value)}/>

@@ -38,8 +38,6 @@ export default function Upload() {
         data.append('file', selectedFile)
         data.append('upload_preset', 'tpgtfsjg')
         try {
-
-
             axios({
                 url: 'http://localhost:8000/api/tool/new/upload-image',
                 method: 'POST',
