@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react'
 import axios from 'axios'
 import { useForm } from 'react-hook-form';
 import {navigate} from "@reach/router"
-import Upload from './UploadFile'
 import { UserContext } from '../provider/Provider';
 
 const ToolAdd = (props) => {
@@ -31,8 +30,8 @@ const ToolAdd = (props) => {
             data: formData
         }).then((res) => {
             console.log(res);
-            let imageURL = res.data.url
-            axios.post(`http://localhost:8080/api/tool/${user.id}`, {
+            let imageUrl = res.data.url
+            axios.post(`http://localhost:8080/api/tools/${user.id}`, {
                 name: data.name,
                 description: data.description,
                 price: data.price,
@@ -42,11 +41,12 @@ const ToolAdd = (props) => {
                 if(res.data.error){
                     setErrs(res.data.error.errors);
                 }else{
-                    // navigate(`/`)
+                    navigate(`/`)
+                console.log(res.data)
                 }
             })
         })
-
+    }
 
         
 
