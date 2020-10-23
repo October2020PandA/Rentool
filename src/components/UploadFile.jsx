@@ -38,10 +38,8 @@ export default function Upload() {
         data.append('file', selectedFile)
         data.append('upload_preset', 'tpgtfsjg')
         try {
-
-
             axios({
-                url: 'http://localhost:8000/api/tool/new/upload-image',
+                url: 'https://api.cloudinary.com/v1_1/ericyoary/upload',
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 data: data
