@@ -38,7 +38,7 @@ const Login = (props) => {
                     <button className="btn btn-secondary btn-m" onClick={() => navigate(`/`)}>Back to Home</button>
                 </li>
             </ul>
-            <h1 className="font-weight-bold">RentTool</h1>
+            <h1 className="font-weight-bold">RenTool</h1>
             <hr/>
             <div className="login-form">
                 <h2 className="text-start">User Login</h2>
@@ -90,7 +90,7 @@ const Login = (props) => {
                 }
             
             <div className="terms-of-service">
-                <span>Terms of Service</span>
+                <span>Terms of Service | </span>
                 <span>Contact</span>
             </div>
         </div>
