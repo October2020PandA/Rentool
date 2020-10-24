@@ -5,12 +5,14 @@ import axios from 'axios'
 const ToolDetail = (props) =>{
     const [tool, setTool] = useState({})
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/tools/${props.id}`)
-        .then(res => setTool(res.data))
+        axios.get(`http://localhost:8080/api/tools/${props.id}`)
+        .then(res => {setTool(res.data)
+            console.log(res)})
         .catch(err =>  console.log(err))
+        
     },[])
     const deleteTool = () => {
-        axios.delete(`http://localhost:8000/api/tools/${props.id}`)
+        axios.delete(`http://localhost:8080/api/tools/${props.id}`)
         .then(res => navigate("/"))
         .catch(err => console.log(err))
     }
@@ -22,7 +24,7 @@ const ToolDetail = (props) =>{
     <div className="card-body">
     <dl className="row card-text">
         <dt className="col-sm">Photo:</dt>
-        <dd className="col-sm">{tool.photo}</dd>
+        <dd className="col-sm"><img src={tool.image} alt="tool" /></dd>
     </dl>
     <dl className="row card-text">
         <dt className="col-sm">Tool Price :</dt>
