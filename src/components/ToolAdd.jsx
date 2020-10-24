@@ -32,7 +32,7 @@ const ToolAdd = (props) => {
             console.log(res);
             let imageUrl = res.data.url
             // axios.post(`http://localhost:8080/api/tools/${user.id}`, {
-            axios.post(`http://localhost:8080/api/tools/1`, {
+            axios.post(`http://localhost:8080/api/tools/${user.id}`, {
                 name: data.name,
                 description: data.description,
                 price: data.price,
