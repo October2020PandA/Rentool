@@ -89,24 +89,24 @@ const ToolList = () => {
         ) : (
           tools.map((tool) => (
             <div
-              className=""
+              className="card_container"
               key={tool.id}
               onClick={() => navigate(`/dashboard/${tool.id}`)}
             >
-              <img src={tool.image} alt="tool" />
-              <span>{tool.name}</span>
-              <span>${tool.price}</span>
+              <img className='card_image' src={tool.image} alt="tool" />
+              <span className="tool_name">{tool.name}: </span>
+              <span className="tool_price">${tool.price}</span>
             </div>
           ))
         )}
       </div>
-      <div>
+      <div className="page_count">
         {totalPages.map((page, i) => (
-          <span key={i} onClick={() => getNewPage(i + 1)}>
+          <span className='count' key={i} onClick={() => getNewPage(i + 1)}>
             {i + 1}
           </span>
         ))}
-        <span>Viewing Page: {page}</span>
+        <span className='current_page' > Page: {page}</span>
       </div>
     </div>
   );

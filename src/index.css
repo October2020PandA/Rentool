@@ -18,12 +18,18 @@ code {
   margin-left: 950px;
 }
 hr {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 .font-weight-bold {
   text-align: center;
   padding-bottom: 30px;
   font-size: 70px;
+  border: solid grey;
+  margin-top: 25px;
+  margin-bottom: 80px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
 }
 .main_title {
   margin-top: 100px;
@@ -57,9 +63,18 @@ h4 {
 .btn-primary {
   margin-top: 40px;
   margin-left: 400px;
+
 }
 .btn-secondary {
   margin-top: 40px;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 .login-form {
   max-width: 300px;
@@ -85,4 +100,61 @@ i {
 .col-sm {
   text-align: start;
   display: inline-block;
+}
+.card_container  {
+  display: inline-block;
+  width: 40%;
+  box-shadow: 0 6px 10px rgba(26, 27, 29, 0.17);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  margin: 20px;
+  margin-left: 60px;
+}
+.tool_name, .tool_price {
+  font-size: x-large;
+  display: block;
+  margin-left: 10px;
+  box-shadow: 0 6px 20px rgba(6, 7, 8, 0.17);
+  border-radius: 10px;
+}
+.card_image {
+  display: inline-block;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(6, 7, 8, 0.17);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  margin: 20px;
+  margin-left: 1px;
+}
+.current_page {
+  margin-bottom: 20px;
+}
+.page_count {
+  font-size: 25px;
+  margin: 20px;
+  box-shadow: 0 6px 20px rgba(6, 7, 8, 0.17);
+  border-radius: 10px;
+}
+.count {
+  border: solid 2px black;
+  margin: 5px;
+}
+.img-details {
+  display: block;
+  width: 100%;
+  box-shadow: 0 6px 10px rgba(26, 27, 29, 0.17);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  margin: 20px;
+  margin-left: 1px;
+}
+.text-center {
+  width: 50%;
+}
+.single_name {
+  padding-left: 200px;
+  font-weight: bold;
 }

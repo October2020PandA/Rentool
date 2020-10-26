@@ -24,13 +24,12 @@ const ToolDetail = (props) =>{
     }
     return(
         <div className="container">
-        <h1>{tool.name}</h1>
+        <h1 className="font-weight-bold">RenTool</h1>
+        <h1 className='single_name' >{tool.name} :</h1>
     <div className="card text-center">
-    <div className="card-header font-weight-bold">{tool.name}</div>
     <div className="card-body">
     <dl className="row card-text">
-        <dt className="col-sm">Photo:</dt>
-        <dd className="col-sm"><img src={tool.image} alt="tool" /></dd>
+        <dd className="col-sm"><img className="img-details" src={tool.image} alt="tool" /></dd>
     </dl>
     <dl className="row card-text">
         <dt className="col-sm">Tool Price :</dt>
