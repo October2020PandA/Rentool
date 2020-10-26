@@ -45,7 +45,7 @@ const ToolDetail = (props) =>{
     </dl>
     <dl className="row card-text">
         <dt className="col-sm">State/Zip:</dt>
-    <dd className="col-sm">{userInfo.state}/ {userInfo.zip}</dd>
+    <dd className="col-sm">{userInfo.state} / {userInfo.zip}</dd>
     </dl>
     <dl className="row card-text">
         <dt className="col-sm">Owner email:</dt>

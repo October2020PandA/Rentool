@@ -140,6 +140,7 @@ i {
 .count {
   border: solid 2px black;
   margin: 5px;
+  cursor: pointer;
 }
 .img-details {
   display: block;
