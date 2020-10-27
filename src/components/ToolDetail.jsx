@@ -1,20 +1,22 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import {navigate} from '@reach/router'
 import axios from 'axios'
+import { UserContext } from "../provider/Provider";
 
 const ToolDetail = (props) =>{
+    const [user, setUser] = useContext(UserContext);
     const [tool, setTool] = useState({})
     const [userInfo, setUserInfo] = useState({})
     useEffect(() => {
         axios.get(`http://localhost:8080/api/tools/${props.id}`)
-        .then(res => {setTool(res.data)
-            console.log(res)})
+        .then(res => {setTool(res.data)})
         .catch(err =>  console.log(err))
 
         axios.get(`http://localhost:8080/api/tools/user/${props.id}`)
-        .then(resp => {setUserInfo(resp.data)
-            console.log(resp)})
+        .then(resp => {setUserInfo(resp.data)})
         .catch(err =>  console.log(err))
+        console.log("im user info", userInfo)
+        console.log("im user", user)
         
     },[])
     const deleteTool = () => {
@@ -51,7 +53,11 @@ const ToolDetail = (props) =>{
         <dt className="col-sm">Owner email:</dt>
         <dd className="col-sm">{userInfo.email}</dd>
     </dl>
-        <button className="btn btn-danger m-1" onClick={deleteTool}>Save</button>
+    
+    { (user.id == userInfo.id)?
+        <button className="btn btn-danger m-1" onClick={deleteTool}>Delete</button>    
+   : null } 
+        
         <button className="btn btn-secondary m-1" onClick={() => navigate("/")}>Back to Home</button>
     </div>
     </div>

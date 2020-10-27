@@ -14,6 +14,7 @@ const Login = (props) => {
         const response = await axios.post("http://localhost:8080/api/register", data);
         console.log(response.data);
         setUser(response.data)
+        setViewLogin(prevState => !prevState)
     }
     
     const login = async (data) => {
